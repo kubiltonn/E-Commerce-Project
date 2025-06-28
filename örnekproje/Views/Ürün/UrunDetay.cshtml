@@ -1,0 +1,62 @@
+﻿@model IEnumerable<örnekproje.Models.Product>
+
+@{
+    ViewData["Title"] = "Ürün Detayları";
+}
+
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <h1 class="h3 mb-4 text-gray-800">Ürün Detayları</h1>
+
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                    @item.Category?.CategoryName
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">@item.ProductName</div>
+                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                    @item.Price.ToString("C")
+                                </div>
+                                <p class="text-gray-800 small mt-2">@item.Description</p>
+                            </div>
+                            <div class="col-auto">
+
+                                @if (!string.IsNullOrEmpty(item.ImageUrl))
+                                {
+                                    <img src="@item.ImageUrl" class="img-fluid rounded" style="max-width: 100px; max-height: 100px;" alt="@item.ProductName">
+                                }
+                                else
+                                {
+                                    <i class="fas fa-box fa-2x text-gray-300"></i>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent border-0">
+                       
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@section Scripts {
+    <script>// Card'ların hover efekti
+        $(document).ready(function () {
+            $('.card').hover(
+                function () {
+                    $(this).addClass('shadow-lg').css('cursor', 'pointer');
+                },
+                function () {
+                    $(this).removeClass('shadow-lg');
+                }
+            );
+        });</script>
+}

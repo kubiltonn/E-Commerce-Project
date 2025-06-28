@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>İletişim</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        .iletisim-banner {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/1600x400/?technology,contact') center/cover no-repeat;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+
+        .form-control, .btn {
+            border-radius: 8px;
+        }
+
+        .info-box {
+            background: #f8f9fa;
+            border-left: 4px solid #0d6efd;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+            .info-box h6 {
+                margin-bottom: 5px;
+                font-weight: 600;
+            }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-4">
+        <div class="iletisim-banner">
+            <h2 class="display-6">İletişim</h2>
+            <p class="lead">Bizimle iletişime geçmekten çekinmeyin</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-7">
+                <h4 class="mb-3">Bize Yazın</h4>
+                <form>
+                    <div class="mb-3">
+                        <label for="adSoyad" class="form-label">Ad Soyad</label>
+                        <input type="text" class="form-control" id="adSoyad" placeholder="Adınız ve Soyadınız">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-posta</label>
+                        <input type="email" class="form-control" id="email" placeholder="ornek@eposta.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="konu" class="form-label">Konu</label>
+                        <input type="text" class="form-control" id="konu" placeholder="Konu başlığı">
+                    </div>
+                    <div class="mb-3">
+                        <label for="mesaj" class="form-label">Mesaj</label>
+                        <textarea class="form-control" id="mesaj" rows="5" placeholder="Mesajınızı yazınız..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Gönder</button>
+                </form>
+            </div>
+
+
+            <div class="col-md-5">
+                <h4 class="mb-3">İletişim Bilgileri</h4>
+                <div class="info-box">
+                    <h6>Telefon</h6>
+                    <p class="mb-0">+90 212 123 45 67</p>
+                </div>
+                <div class="info-box">
+                    <h6>E-posta</h6>
+                    <p class="mb-0">itoProje@ornekmail.com</p>
+                </div>
+                <div class="info-box">
+                    <h6>Adres</h6>
+                    <p class="mb-0">İstanbul, Türkiye</p>
+                </div>
+            </div>
+            <section class="contact-map-section">
+                <div class="auto-container">
+                    <div class="map-boxed">
+                        <div class="map-outer">
+                            <iframe style="width:1300px ; height:250px; margin-bottom:30px; margin-top:20px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.7846332089507!2d28.830566183763946!3d40.98619653684289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa368c2b90833%3A0xffd8f2494c42715f!2zWWXFn2lsa8O2eSwgxLBzdGFuYnVsIETDvG55YSBUaWNhcmV0IE1yay4sIDM0MTQ5IEJha8SxcmvDtnkvxLBzdGFuYnVs!5e0!3m2!1str!2str!4v1694611948030!5m2!1str!2str" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+</body>
+</html>

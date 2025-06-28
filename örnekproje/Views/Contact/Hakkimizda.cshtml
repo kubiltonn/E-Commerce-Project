@@ -1,0 +1,143 @@
+﻿@{
+    ViewData["Title"] = "Hakkımızda";
+}
+
+<style>
+    .hero-section {
+        background: linear-gradient(to right, #4e73df, #224abe);
+        color: white;
+        padding: 80px 30px;
+        border-radius: 12px;
+        margin-bottom: 50px;
+    }
+
+    .info-card {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        padding: 30px;
+        margin-bottom: 30px;
+        transition: transform 0.3s ease;
+    }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+        }
+
+    .icon-circle {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+
+    .icon-blue {
+        background-color: #4e73df;
+        color: white;
+    }
+
+    .icon-green {
+        background-color: #1cc88a;
+        color: white;
+    }
+
+    .icon-orange {
+        background-color: #f6c23e;
+        color: white;
+    }
+    .hero-banner {
+        position: relative;
+        height: 200px;
+        background-image: url('/images/hero-bg.jpg'); 
+        background-size: cover;
+        background-position: center;
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 50px;
+    }
+
+        .hero-banner .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(30, 40, 70, 0.6); 
+            z-index: 1;
+        }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 700px;
+        padding: 20px;
+    }
+
+</style>
+
+<div class="container mt-5">
+    <div class="hero-banner d-flex align-items-center justify-content-center text-center">
+    <div class="overlay"></div>
+    <div class="hero-content text-white">
+        <h3 class="display-4 fw-bold">Biz Kimiz?</h3>
+        <p class="lead">Teknolojiyle fark yaratıyoruz. Geleceği birlikte inşa ediyoruz.</p>
+    </div>
+</div>
+
+
+    <div class="row align-items-center mb-5">
+        <div class="col-md-6">
+            <img src="~/img/SOFT.jpg" class="img-fluid rounded shadow" alt="Biz Kimiz?" />
+        </div>
+        <div class="col-md-6">
+            <h3>Biz Kimiz?</h3>
+            <p>
+                Sektördeki kalifiye işgücü eksikliğine istinaden, Odamız öncülüğünde günümüz gençlerine geleceğin yetkinliklerini kazandırmak için başlatılan SoftITo Yazılım-Bilişim Akademisi Projemiz; yazılım sektörüne güçlü insan kaynağı yetiştirmeyi, girişimcilik, mentörlük ve istihdam hedefli yeni nesil yazılım ekosistemi oluşturmayı, Türkiye’de yazılım ve bilişim teknolojilerine ulaşmada fırsat eşitsizliğinin azaltılmasını, sektörün gelişim eğrisi ve hedefleri çerçevesinde, yazılım sektöründeki bu büyümeden en fazla payı almak adına hazırlanmıştır.
+
+                SoftITo Yazılım - Bilişim Akademisi Projesi, genel anlamda günümüz gençlerine geleceğin yetkinliklerini kazandırmak için başlatılan bir seferberliktir. Eğitim durumu, yaş, maddi imkanlar ve benzeri kısıtlara takılmaksızın ön elemelerin tüm gençlerimize açık olduğu tam bir fırsat eşitliği sunmaktadır. Eğitim sonunda elde edilecek yetkinlikler ile gençlerimizin işgücüne katılımı kolaylaşacak, yazılım - bilişim ekosistemine güçlü bir insan kaynağı girdisi sağlanacaktır.
+            </p>
+            <h4>Amacımız</h4>
+            <p>
+                Girişimcilik, mentörlük ve istihdam hedefli yeni nesil yazılım ekosisteminin temelini oluşturmak
+                Türkiye yazılım ihracatı stratejisine destek olmak
+                Türkiye’nin her noktasına yazılım ve bilişim teknolojilerini götürerek fırsat eşitliği sunmak
+                Kurumların ihtiyaç duyduğu yazılım personelini sağlamak
+                Kritik kurumlar için nitelikli ve güvenilir profesyoneller yetiştirmek
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="info-card text-center">
+                <div class="icon-circle icon-blue mx-auto">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h5>Takım Ruhu</h5>
+                <p>Birbirini tamamlayan yeteneklerle güçlü bir ekip çalışması yürütüyoruz.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="info-card text-center">
+                <div class="icon-circle icon-green mx-auto">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h5>Yenilikçilik</h5>
+                <p>Sürekli öğrenerek ve geliştirerek fark yaratacak projeler üretiyoruz.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="info-card text-center">
+                <div class="icon-circle icon-orange mx-auto">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <h5>Güvenilirlik</h5>
+                <p>Müşteri bilgileriniz ve projeleriniz bizimle güvende.</p>
+            </div>
+        </div>
+    </div>
+</div>

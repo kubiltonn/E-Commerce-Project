@@ -1,0 +1,50 @@
+﻿@model örnekproje.Models.Product
+
+
+
+
+<div class="container mt-4">
+    <h3 class="mb-4"> Ürün Düzenle</h3>
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <form asp-action="Edit" asp-controller="Admin" method="post">
+                <input type="hidden" asp-for="ProductID" />
+                <div class="form-group">
+                    <label>Ürün Adı</label>
+                    <input asp-for="ProductName" type="text" class="form-control required" placeholder="Ürün adını giriniz">
+                </div>
+
+                <div class="form-group">
+                    <label>Fiyat</label>
+                    <input asp-for="Price" type="number" class="form-control" placeholder="Fiyat">
+                </div>
+
+                <div class="form-group">
+                    <label>Stok</label>
+                    <input asp-for="Stock" type="number" class="form-control" placeholder="Stok">
+                </div>
+
+                <div class="form-group">
+                    <label>Açıklama</label>
+                    <textarea asp-for="Description" class="form-control" rows="3" placeholder="Açıklama"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="CategoryNo" class="control-label">Kategori</label>
+                    <select asp-for="CategoryNo" class="form-control" asp-items="ViewBag.Categories">
+                        <option value="">-- Kategori Seçin --</option>
+                    </select>
+                    <span asp-validation-for="CategoryNo" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Image URL</label>
+                    <input asp-for="ImageUrl" type="url" class="form-control" placeholder="https://...">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Kaydet</button>
+                <a href="@Url.Action("AdminPage", "Admin")" class="btn btn-secondary">İptal</a>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+﻿@model örnekproje.Models.Category
+
+
+
+
+<div class="container mt-4">
+    <h3 class="mb-4">Yeni Kategori Ekle</h3>
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <form asp-action="Create" asp-controller="Category" method="post">
+                <div class="form-group">
+                    <label>Kategori Adı</label>
+                    <input asp-for="CategoryName" type="text" class="form-control required" placeholder="Kategori adını giriniz">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Ekle</button>
+                <a href="@Url.Action("Kategoriler", "Category")" class="btn btn-secondary">İptal</a>
+            </form>
+        </div>
+    </div>
+</div>

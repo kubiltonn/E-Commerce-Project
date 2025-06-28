@@ -1,0 +1,82 @@
+﻿
+@model IEnumerable<örnekproje.Models.User>
+
+
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Kullanıcı Yönetimi</h1>
+        <div class="row">
+
+        </div>
+        <a asp-action="Create" asp-controller="User" class="btn btn-success">
+            <i class="fas fa-plus fa-sm text-white-50"></i> Yeni Kullanıcı Ekle
+        </a>
+    </div>
+
+    <!-- Ürünler Tablosu -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Kullanıcı Listesi</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="productsTable" width="100%" cellspacing="0">
+                    <thead
+
+
+
+                        <tr>
+                            <th>ID</th>
+                            <th>Kullanıcı Ad-Soyad</th>
+                    <th>Kullanıcı Yaş</th>
+                            <th>Kullanıcı Mail</th>
+                            <th>Kullanıcı Şifre</th>
+                            <th>Kullanıcı TelefonNo</th>
+                            <th>Kullanıcı Adres</th>
+                            <th>Kullanıcı Şehir</th>
+                            <th>Kullanıcı Posta Kodu</th>
+                            <th>Kullanıcı Kayıt Tarihi</th>
+                            <th>Kullanıcı Durum</th>
+                            <th>Kullanıcı Rol</th>
+
+
+                        </tr>
+                                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <th>@item.UserID</th>
+                                <th>@item.FullName</th>
+                                <th>@item.Yas</th>
+                                <th>@item.Email</th>
+                                <th>@item.Password</th>
+                                <th>@item.PhoneNumber</th>
+                                <th>@item.Address</th>
+                                <th>@item.City</th>
+                                <th>@item.PostalCode</th>
+                                <th>@item.CreatedDate</th>
+                                <th>@item.IsActive</th>
+                                <th>@item.Role</th>
+
+
+
+                                <td>
+                                    <a asp-action="Edit" asp-controller="User" asp-route-id="@item.UserID" class="btn btn-sm btn-warning">
+                                        Düzenle
+                                    </a>
+                                    <a asp-action="Delete" asp-controller="User" asp-route-id="@item.UserID" class="btn btn-sm btn-danger">
+                                        Sil
+                                    </a>
+
+                                </td>
+                            </tr>
+
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

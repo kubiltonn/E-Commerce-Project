@@ -1,0 +1,71 @@
+﻿@model IEnumerable<örnekproje.Models.ViewModel.ProCat>
+
+@{
+    var sortOrder = Context.Request.Query["sortOrder"].ToString();
+}
+<form method="get" asp-action="Index" class="mb-3">
+    <div class="form-group row">
+        <label for="sortOrder" class="col-sm-2 col-form-label">Sıralama:</label>
+        <div class="col-sm-4">
+            <select class="form-control" id="sortOrder" name="sortOrder" onchange="this.form.submit()">
+                @if (sortOrder == "") {
+                    <option value="" selected>Ürün Adı (A-Z)</option>
+                } else {
+                    <option value="">Ürün Adı (A-Z)</option>
+                }
+                @if (sortOrder == "name_desc") {
+                    <option value="name_desc" selected>Ürün Adı (Z-A)</option>
+                } else {
+                    <option value="name_desc">Ürün Adı (Z-A)</option>
+                }
+                @if (sortOrder == "Price") {
+                    <option value="Price" selected>Fiyat (Artan)</option>
+                } else {
+                    <option value="Price">Fiyat (Artan)</option>
+                }
+                @if (sortOrder == "price_desc") {
+                    <option value="price_desc" selected>Fiyat (Azalan)</option>
+                } else {
+                    <option value="price_desc">Fiyat (Azalan)</option>
+                }
+                @if (sortOrder == "Stock") {
+                    <option value="Stock" selected>Stok (Artan)</option>
+                } else {
+                    <option value="Stock">Stok (Artan)</option>
+                }
+                @if (sortOrder == "stock_desc") {
+                    <option value="stock_desc" selected>Stok (Azalan)</option>
+                } else {
+                    <option value="stock_desc">Stok (Azalan)</option>
+                }
+            </select>
+        </div>
+    </div>
+</form>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Ürün Adı</th>
+            <th>Ürün Fiyatı</th>
+            <th>Ürün Stok Adet</th>
+            <th>Kategori No</th>
+            <th>Kategori Adi</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ProductName.</td>
+                <td>@item.Price</td>
+                <td>@item.Stock</td>
+                <td>@item.CategoryID</td>
+                <td>@item.CategoryName</td>
+            </tr>
+        }
+
+
+    </tbody>
+</table>
